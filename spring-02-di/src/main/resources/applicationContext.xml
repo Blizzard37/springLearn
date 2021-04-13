@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="address" class="com.wzs.pojo.Address">
+        <property name="address" value="山东潍坊"></property>
+    </bean>
+    <bean id="student" class="com.wzs.pojo.Student">
+        <property name="name" value="王之山"/>
+        <property name="address" ref="address"/>
+        <property name="book">
+            <array>
+                <value>高等数学</value>
+                <value>线性代数</value>
+                <value>概率论</value>
+            </array>
+        </property>
+        <property name="course">
+            <list>
+                <value>体育</value>
+                <value>手工</value>
+                <value>语文</value>
+            </list>
+        </property>
+        <property name="grades">
+            <map>
+                <entry key="高等数学" value="100"></entry>
+                <entry key="Android" value="100"></entry>
+                <entry key="数据结构" value="100"></entry>
+            </map>
+        </property>
+        <property name="wife" >
+            <null></null>
+        </property>
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>yys</value>
+                <value>CF</value>
+            </set>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="url">www.wingsofcode.com</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
